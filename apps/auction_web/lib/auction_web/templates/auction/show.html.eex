@@ -1,0 +1,7 @@
+<h1><%= @auction.title %></h1>
+
+<ul>
+  <li><strong>Description:</strong> <%= @auction.description %></li>
+  <li><strong>Auction runs from:</strong> <%= @auction.starts_at %> - <%= @auction.ends_at %></li>
+</ul>
+

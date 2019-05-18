@@ -1,0 +1,12 @@
+<div>
+    <h2>My Auctions</h2>
+    <%= if length(@auctions) == 0 do %>
+        <p>Looks like you do not have any auctions. Would you like to <%= link "host one?", to: Routes.auction_path(@conn, :new) %></p>
+    <% else %>
+        <ul>
+        <%= for auction <- @auctions do %>
+            <li><%= link auction.title, to: Routes.auction_path(@conn, :show, auction) %></li>
+        <% end %>
+        </ul>
+    <% end %>
+</div>

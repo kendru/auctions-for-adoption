@@ -1,0 +1,3 @@
+<h1>Host an Auction</h1>
+
+<%= render "form.html", auction: @auction, action: Routes.auction_path(@conn, :create) %>

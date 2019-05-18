@@ -1,0 +1,6 @@
+<ul>
+  <%= for auction <- @auctions do %>
+
+    <li><strong><%= link auction.title, to: Routes.auction_path(@conn, :show, auction.id) %></strong></li>
+  <% end %>
+</ul>
